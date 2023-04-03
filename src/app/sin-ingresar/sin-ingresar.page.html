@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="secundary">
+    <ion-title style="color:white">Ingreso</ion-title>
+  </ion-toolbar>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+</ion-header>
+
+<ion-content class="ion-padding">
+  <H1 align="center" style="font-weight: bold;">Arteniz Store</H1>
+  <img style="border-radius: 5%; margin: 7% 0% 0% 5%" width="85%" alt="Silhouette of mountains"
+    src="assets/descarga.jpg" />
+  <p style="font-size: 12px;">
+    Tienda de ropa. Encuentra lo que te representa, te complementa y te ayuda a dar lo mejor de ti, estilo ùnico.
+    Ropa Deportiva. Ventas al Detal. Envíos a todo Colombia.
+  </p>
+
+  <ion-button expand="block" color="warning" style="margin: 10% " [routerLink]="['/register']">
+    REGISTRATE
+    <ion-icon  slot="end" name="people-outline"></ion-icon>
+  </ion-button>
+  <ion-button expand="block"  color="warning" style="margin: 10%" [routerLink]="['/login']">
+    INGRESA
+    <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+  </ion-button>
+</ion-content>

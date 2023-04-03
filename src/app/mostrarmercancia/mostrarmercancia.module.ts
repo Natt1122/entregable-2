@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EditPagePageRoutingModule } from './edit-page-routing.module';
+import { MostrarmercanciaPageRoutingModule } from './mostrarmercancia-routing.module';
 
-import { EditPagePage } from './edit-page.page';
+import { MostrarmercanciaPage } from './mostrarmercancia.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EditPagePageRoutingModule
+    MostrarmercanciaPageRoutingModule
   ],
-  declarations: [EditPagePage]
+  declarations: [MostrarmercanciaPage]
 })
-export class EditPagePageModule {}
+export class MostrarmercanciaPageModule {}

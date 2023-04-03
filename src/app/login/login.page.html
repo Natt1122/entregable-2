@@ -1,21 +1,26 @@
 <ion-header>
-  <ion-toolbar color="success">
-    <ion-title>Login T de A 🧐</ion-title>
+  <ion-toolbar color="secundary">
+    <ion-title  style="color:white">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Correo institucional</ion-label>
+  <img style="border-radius: 5%; margin: 7% 0% 0% 7%" width="85%" alt="Silhouette of mountains"
+    src="assets/images.jpg" />
+  <ion-item  style="margin-top: 10% ">
+    <ion-label position="floating">Correo </ion-label>
+    <ion-icon slot="end" name="archive-outline"></ion-icon>
     <ion-input type="email" required [(ngModel)]="user.email" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Contraseña</ion-label>
-    <ion-input type="password" required [(ngModel)]="user.password" ></ion-input>
+    <ion-icon slot="end" name="lock-closed-outline"></ion-icon>
+    <ion-input type="password" required [(ngModel)]="user.password"></ion-input>
   </ion-item>
 
-  <ion-button class="ion-padding" color="primary" (click)="login(user)">Ingresar</ion-button>
-
-  <ion-button class="ion-padding" color="light" [routerLink]="['/register']">Registrarse</ion-button>
+  <ion-button style="margin-top: 10%" class="ion-padding"  color="warning" expand="block" (click)="login(user)">
+    <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+    Ingresar
+  </ion-button>
 </ion-content>
