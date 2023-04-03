@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController, LoadingController } from '@ionic/angular';
-import { Post } from '../models/post.model';
+import { MercanciaModel } from '../models/MercanciaModel';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { NavController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
-@Component({
-  selector: 'app-add-post',
-  templateUrl: './add-post.page.html',
-  styleUrls: ['./add-post.page.scss'],
-})
-export class AddPostPage implements OnInit {
 
-  post = {} as Post;
+@Component({
+  selector: 'app-agregar-mercancia',
+  templateUrl: './agregar-mercancia.page.html',
+  styleUrls: ['./agregar-mercancia.page.scss'],
+})
+export class AgregarMercanciaPage implements OnInit {
+
+  mercancia = {} as MercanciaModel;
 
   constructor(private toastCtrl: ToastController,
     private afAuth: AngularFireAuth,
@@ -20,37 +21,41 @@ export class AddPostPage implements OnInit {
     private navCtrl: NavController,
     private firestore: AngularFirestore) { }
 
-  ngOnInit() { }
+    
+  ngOnInit() {
+  }
 
-  async createPost(post: Post){
+  async createmercancia(mercancia: MercanciaModel) {
 
-    if (this.formValidation()) {
+   // if (this.formValidation()) {
       let loader = await this.loadingCtrl.create({
         message: "Espere un momento por favor..."
       });
       await loader.present();
-      
+
       try {
-        await this.firestore.collection("posts").add(post);      
-                        
-      } catch (e:any) {
+        await this.firestore.collection("mercancia").add(mercancia);
+
+        this.navCtrl.navigateRoot("mostrarmercancia");
+
+      } catch (e: any) {
         e.message = "Mensaje de error en post";
         let errorMessage = e.message || e.getLocalizedMessage();
-        
-        this.showToast(errorMessage);     
+
+        this.showToast(errorMessage);
       }
 
       await loader.dismiss();
 
-      this.navCtrl.navigateRoot("home");
-    
-    }
+      this.navCtrl.navigateRoot("mostrarMercancia");
 
-    
+   // }
+
+
 
   }
 
-  formValidation() {
+  /*formValidation() {
     if (!this.post.title) {
       this.showToast("Ingrese un titulo");
       return false;
@@ -62,8 +67,8 @@ export class AddPostPage implements OnInit {
     }
 
     return true;
-  }
-  
+  } */
+
 
   showToast(message: string) {
     this.toastCtrl.create({
@@ -71,6 +76,5 @@ export class AddPostPage implements OnInit {
       duration: 5000 // Aumenta la duración del mensaje a 5 segundos
     }).then(toastData => toastData.present());
   }
-
 
 }

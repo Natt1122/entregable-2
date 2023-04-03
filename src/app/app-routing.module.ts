@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'sin-ingresar',
     pathMatch: 'full'
   },
   {
@@ -20,13 +20,21 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'add-post',
-    loadChildren: () => import('./add-post/add-post.module').then( m => m.AddPostPageModule)
+    path: 'sin-ingresar',
+    loadChildren: () => import('./sin-ingresar/sin-ingresar.module').then( m => m.SinIngresarPageModule)
   },
   {
-    path: 'edit-page/:id',
-    loadChildren: () => import('./edit-page/edit-page.module').then( m => m.EditPagePageModule)
+    path: 'agregar-mercancia',
+    loadChildren: () => import('./agregar-mercancia/agregar-mercancia.module').then( m => m.AgregarMercanciaPageModule)
   },
+  {
+    path: 'mostrarmercancia',
+    loadChildren: () => import('./mostrarmercancia/mostrarmercancia.module').then( m => m.MostrarmercanciaPageModule)
+  },
+
+
+ 
+
 ];
 
 @NgModule({

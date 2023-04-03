@@ -6,13 +6,13 @@
 export const environment = {
   production: false,
   FIREBASE_CONFIG:{
-    apiKey: "AIzaSyDcqHP82F85ATzRea-9BWzKnq1cfr4IB1o",
-    authDomain: "entregable2-79b28.firebaseapp.com",
-    projectId: "entregable2-79b28",
-    storageBucket: "entregable2-79b28.appspot.com",
-    messagingSenderId: "446729551407",
-    appId: "1:446729551407:web:e2308cf501f951ce8fd0da",
-    measurementId: "G-QWJG2RVSVG"
+    apiKey: "AIzaSyCEF8wzEj3_AsIPtXL9sYlr8e2Jqwp6xGQ",
+    authDomain: "appionicarteniz.firebaseapp.com",
+    projectId: "appionicarteniz",
+    storageBucket: "appionicarteniz.appspot.com",
+    messagingSenderId: "451527520610",
+    appId: "1:451527520610:web:1b947cf004917a17c87c3b",
+    measurementId: "G-74RH6L8PQ2"
   }
 };
 

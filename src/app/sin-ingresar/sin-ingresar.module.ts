@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddPostPageRoutingModule } from './add-post-routing.module';
+import { SinIngresarPageRoutingModule } from './sin-ingresar-routing.module';
 
-import { AddPostPage } from './add-post.page';
+import { SinIngresarPage } from './sin-ingresar.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddPostPageRoutingModule
+    SinIngresarPageRoutingModule
   ],
-  declarations: [AddPostPage]
+  declarations: [SinIngresarPage]
 })
-export class AddPostPageModule {}
+export class SinIngresarPageModule {}

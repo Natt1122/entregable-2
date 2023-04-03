@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { AddPostPage } from './add-post.page';
+import { SinIngresarPage } from './sin-ingresar.page';
 
-describe('AddPostPage', () => {
-  let component: AddPostPage;
-  let fixture: ComponentFixture<AddPostPage>;
+describe('SinIngresarPage', () => {
+  let component: SinIngresarPage;
+  let fixture: ComponentFixture<SinIngresarPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddPostPage ],
+      declarations: [ SinIngresarPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AddPostPage);
+    fixture = TestBed.createComponent(SinIngresarPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

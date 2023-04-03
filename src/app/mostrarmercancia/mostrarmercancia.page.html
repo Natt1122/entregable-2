@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="secundary">
+    <ion-title style="color:white" >Registros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let mercancia  of mostrarmercancia">
+    <div style="background-color: #F1F352
+    ; padding:3px ; margin-top: 20px; border-radius: 25px; margin-left: 10px ; margin-right: 10px; display: flex; align-items: center; justify-content: center; ">
+      <h6>{{mercancia.referencia}}-</h6>
+      <h6>{{mercancia.talla}}-</h6>
+      <h6>{{mercancia.color}}</h6>
+    </div>
+  </ion-list>
+</ion-content>
